@@ -3,10 +3,10 @@
 # ----------------------- #
 
 url: http://lufeihaidao.github.com
-title: My Octopress Blog
-subtitle: A blogging framework for hackers.
-author: Your Name
-simple_search: http://google.com/search
+title: Wulfric's Blog
+subtitle: feel free to change the world!
+author: Wulfric Wang
+simple_search: https://google.com/search?q=
 description:
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
