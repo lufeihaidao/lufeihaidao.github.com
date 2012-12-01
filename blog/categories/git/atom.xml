@@ -4,7 +4,7 @@
   <title><![CDATA[Category: git | Wulfric's Blog]]></title>
   <link href="http://lufeihaidao.github.com/blog/categories/git/atom.xml" rel="self"/>
   <link href="http://lufeihaidao.github.com/"/>
-  <updated>2012-12-01T19:02:49+08:00</updated>
+  <updated>2012-12-01T22:10:32+08:00</updated>
   <id>http://lufeihaidao.github.com/</id>
   <author>
     <name><![CDATA[Wulfric Wang]]></name>
@@ -14,11 +14,29 @@
 
   
   <entry>
-    <title type="html"><![CDATA[hello]]></title>
+    <title type="html"><![CDATA[用 github page 和 octopress 做个人博客]]></title>
     <link href="http://lufeihaidao.github.com/blog/2012/11/30/hello/"/>
     <updated>2012-11-30T00:19:00+08:00</updated>
     <id>http://lufeihaidao.github.com/blog/2012/11/30/hello</id>
-    <content type="html"><![CDATA[<p>This is my first Octopress Blog!</p>
+    <content type="html"><![CDATA[<p>Octopress Blog: Blog for geek!</p>
+
+<h2>一、准备工作</h2>
+
+<p>在开始之前，我们假设你已经安装了如下一些软件：</p>
+
+<ul>
+<li>git</li>
+<li>ruby with RVM</li>
+</ul>
+
+
+<h4>克隆 octopress 代码</h4>
+
+<p><div><script src='https://gist.github.com/4182368.js?file='></script>
+<noscript><pre><code>git clone git://github.com/imathis/octopress.git octopress
+cd octopress    # If you use RVM, You'll be asked if you trust the .rvmrc file (say yes).
+ruby --version  # Should report Ruby 1.9.3</code></pre></noscript></div>
+</p>
 ]]></content>
   </entry>
   
