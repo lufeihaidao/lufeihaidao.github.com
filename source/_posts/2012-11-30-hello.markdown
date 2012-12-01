@@ -1,8 +1,22 @@
 ---
 layout: post
-title: "hello"
+title: "用 github page 和 octopress 做个人博客"
 date: 2012-11-30 00:19
 comments: true
 categories: git 
 ---
-This is my first Octopress Blog!
+Octopress Blog: Blog for geek!
+
+## 一、准备工作
+
+在开始之前，我们假设你已经安装了如下一些软件：
+
+* git
+* ruby with RVM
+
+
+#### 克隆 octopress 代码
+
+{% gist 4182368 %}
+
+
