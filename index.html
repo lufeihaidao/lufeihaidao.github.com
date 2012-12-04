@@ -9,8 +9,8 @@
   <meta name="author" content="Wulfric Wang">
 
   
-  <meta name="description" content="Octopress Blog: Blog for geek! 一、准备工作 在开始之前，我们假设你已经安装了如下一些软件： git
-ruby with RVM 克隆 octopress 代码 git clone git://github.com/imathis/octopress.git &hellip;">
+  <meta name="description" content="Octopress Blog: Blog for geek! Preparation Work I suppose that you&#8217;ve installed such softwares before you start: git
+ruby with RVM Clone &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -84,7 +84,7 @@ ruby with RVM 克隆 octopress 代码 git clone git://github.com/imathis/octopre
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2012/11/30/hello/">用 Github Page 和 Octopress 做个人博客</a></h1>
+      <h1 class="entry-title"><a href="/blog/2012/11/30/hello/">Personal Blog With Github Page and Octopress</a></h1>
     
     
       <p class="meta">
@@ -111,9 +111,9 @@ ruby with RVM 克隆 octopress 代码 git clone git://github.com/imathis/octopre
 
   <div class="entry-content"><p>Octopress Blog: Blog for geek!</p>
 
-<h2>一、准备工作</h2>
+<h2>Preparation Work</h2>
 
-<p>在开始之前，我们假设你已经安装了如下一些软件：</p>
+<p>I suppose that you&#8217;ve installed such softwares before you start:</p>
 
 <ul>
 <li>git</li>
@@ -121,15 +121,29 @@ ruby with RVM 克隆 octopress 代码 git clone git://github.com/imathis/octopre
 </ul>
 
 
-<h4>克隆 octopress 代码</h4>
+<h4>Clone Octopress Code</h4>
 
-<div><script src='https://gist.github.com/4182368.js?file='></script>
-<noscript><pre><code>git clone git://github.com/imathis/octopress.git octopress
-cd octopress    # If you use RVM, You'll be asked if you trust the .rvmrc file (say yes).
-ruby --version  # Should report Ruby 1.9.3</code></pre></noscript></div>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git clone git://github.com/imathis/octopress.git octopress
+</span><span class='line'><span class="nb">cd </span>octopress    <span class="c"># If you use RVM, You&#39;ll be asked if you trust the .rvmrc file (say yes).</span>
+</span><span class='line'>ruby --version  <span class="c"># Should report Ruby 1.9.3</span>
+</span><span class='line'>bundle install  <span class="c"># Install what octopress need</span>
+</span><span class='line'>rake install    <span class="c"># Install the default Octopress theme</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
+<p>Now you can type <code>rake preview</code> to preview the default octopress blog <a href="localhost:4000">here</a>.</p>
 
+<h4>Prepare your github page</h4>
+
+<p>Create a new Github repository and name the repository with your user name or organization name <code>username.github.com</code> or <code>organization.github.com</code>. Just like this: <br/>
+<img src="http://www.lufeipic.tk/f/k/?.jpg" alt="github page" /></p>
+
+<p>Execute <code>rake setup_github_pages</code> and fill in your github page URL. You will then find a _deploy folder which would be deployed remote in your working directory.</p>
 </div>
   
   
@@ -150,7 +164,7 @@ ruby --version  # Should report Ruby 1.9.3</code></pre></noscript></div>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2012/11/30/hello/">用 github page 和 octopress 做个人博客</a>
+        <a href="/blog/2012/11/30/hello/">Personal Blog with Github Page and Octopress</a>
       </li>
     
   </ul>
