@@ -4,7 +4,7 @@
   <title><![CDATA[Category: git | Wulfric's Blog]]></title>
   <link href="http://lufeihaidao.github.com/blog/categories/git/atom.xml" rel="self"/>
   <link href="http://lufeihaidao.github.com/"/>
-  <updated>2012-12-04T22:11:23+08:00</updated>
+  <updated>2012-12-05T10:35:11+08:00</updated>
   <id>http://lufeihaidao.github.com/</id>
   <author>
     <name><![CDATA[Wulfric Wang]]></name>
@@ -42,12 +42,12 @@ rake install    # Install the default Octopress theme
 
 <p>Now you can type <code>rake preview</code> to preview the default octopress blog <a href="localhost:4000">here</a>.</p>
 
-<h4>Prepare your github page</h4>
+<h4>Prepare Your Github Page</h4>
 
 <p>Create a new Github repository and name the repository with your user name or organization name <code>username.github.com</code> or <code>organization.github.com</code>. Just like this: <br/>
 <img src="http://www.lufeipic.tk/f/k/?.jpg" alt="github page" /></p>
 
-<p>Execute <code>rake setup_github_pages</code> and fill in your github page URL. You will then find a _deploy folder which would be deployed remote in your working directory.</p>
+<p>Execute <code>rake setup_github_pages</code> and fill in your github page URL. You will then find a _deploy folder in your working directory which would be deployed remotely.</p>
 ]]></content>
   </entry>
   
