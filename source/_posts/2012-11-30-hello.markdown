@@ -26,9 +26,9 @@ rake install    # Install the default Octopress theme
 
 Now you can type `rake preview` to preview the default octopress blog [here](localhost:4000).
 
-#### Prepare your github page
+#### Prepare Your Github Page
 
 Create a new Github repository and name the repository with your user name or organization name `username.github.com` or `organization.github.com`. Just like this:   
 ![github page](http://www.lufeipic.tk/f/k/?.jpg)
 
-Execute `rake setup_github_pages` and fill in your github page URL. You will then find a _deploy folder which would be deployed remote in your working directory.
+Execute `rake setup_github_pages` and fill in your github page URL. You will then find a _deploy folder in your working directory which would be deployed remotely.
