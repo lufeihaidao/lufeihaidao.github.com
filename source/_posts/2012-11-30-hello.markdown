@@ -33,7 +33,8 @@ Now you can type `rake preview` to preview the default octopress blog [here](loc
 #### Prepare Your Github Page
 
 Create a new Github repository and name the repository with your user name or organization name `username.github.com` or `organization.github.com`. Just like this:   
-![github page](http://www.lufeipic.tk/f/k/?.jpg)
+
+{% img http://www.lufeipic.tk/f/k/?.jpg 'github page' 'github page' %}
 
 Execute `rake setup_github_pages` and fill in your github page URL. You will then find a _deploy folder in your working directory which would be deployed remotely.
 
@@ -129,7 +130,7 @@ git commit -m 'My first article' # commit it locally
 git push origin source # push source remotely
 ```
 
-Three important folder:   
+Three important folders:
 
 * source: source files, edit in this folder
 * public: local preview
