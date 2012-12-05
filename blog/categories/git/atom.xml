@@ -4,7 +4,7 @@
   <title><![CDATA[Category: git | Wulfric's Blog]]></title>
   <link href="http://lufeihaidao.github.com/blog/categories/git/atom.xml" rel="self"/>
   <link href="http://lufeihaidao.github.com/"/>
-  <updated>2012-12-05T16:25:19+08:00</updated>
+  <updated>2012-12-05T18:56:55+08:00</updated>
   <id>http://lufeihaidao.github.com/</id>
   <author>
     <name><![CDATA[Wulfric Wang]]></name>
@@ -49,8 +49,9 @@ rake install    # Install the default Octopress theme
 
 <h4>Prepare Your Github Page</h4>
 
-<p>Create a new Github repository and name the repository with your user name or organization name <code>username.github.com</code> or <code>organization.github.com</code>. Just like this: <br/>
-<img src="http://www.lufeipic.tk/f/k/?.jpg" alt="github page" /></p>
+<p>Create a new Github repository and name the repository with your user name or organization name <code>username.github.com</code> or <code>organization.github.com</code>. Just like this:</p>
+
+<p><img src="http://www.lufeipic.tk/f/k/?.jpg" title="github page" alt="github page"></p>
 
 <p>Execute <code>rake setup_github_pages</code> and fill in your github page URL. You will then find a _deploy folder in your working directory which would be deployed remotely.</p>
 
@@ -160,7 +161,7 @@ git commit -m 'My first article' # commit it locally
 git push origin source # push source remotely
 ```</p>
 
-<p>Three important folder:</p>
+<p>Three important folders:</p>
 
 <ul>
 <li>source: source files, edit in this folder</li>
