@@ -9,8 +9,7 @@
   <meta name="author" content="Wulfric Wang">
 
   
-  <meta name="description" content="Octopress Blog: Blog for geek! Preparation Work I suppose that you&#8217;ve installed such softwares before you start: git
-ruby with RVM Clone &hellip;">
+  <meta name="description" content="Octopress Blog: Blog for geek! This article focus on some simple steps to create a blog with github page and octopress. Preparation Work I suppose &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -108,6 +107,11 @@ ruby with RVM Clone &hellip;">
 
 <div class="entry-content"><p>Octopress Blog: Blog for geek!</p>
 
+<p>This article focus on some simple steps to create a blog with github page and octopress.</p>
+
+<!-- more -->
+
+
 <h2>Preparation Work</h2>
 
 <p>I suppose that you&#8217;ve installed such softwares before you start:</p>
@@ -141,6 +145,184 @@ ruby with RVM Clone &hellip;">
 <img src="http://www.lufeipic.tk/f/k/?.jpg" alt="github page" /></p>
 
 <p>Execute <code>rake setup_github_pages</code> and fill in your github page URL. You will then find a _deploy folder in your working directory which would be deployed remotely.</p>
+
+<h4>Deploy and Push</h4>
+
+<p>Deploy it to github page by:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake generate
+</span><span class='line'>rake deploy
+</span><span class='line'><span class="c"># You can use `rake gen_deploy` instead of them</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This will generate your blog, copy the generated files into _deploy folder, add them to git, commit and push them up to the master branch. In a few seconds you should get an email from Github telling you that your commit has been received and will be published on your site.</p>
+
+<p><strong>DO REMEMBER</strong> to commit the source for your blog.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git add .
+</span><span class='line'>git commit -m <span class="s1">&#39;my first commit&#39;</span>
+</span><span class='line'>git push origin <span class="nb">source</span>
+</span><span class='line'><span class="c"># You will have two branches: &#39;master&#39; to deploy your code and &#39;source&#39; to write and change your blog.</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Post Your First Article</h2>
+
+<p>Now you&#8217;ve already owned your blog on github page. You may have noticed that the default page is not what you perfer. Let&#8217;s modify it.</p>
+
+<p>Run <code>vi _config.yaml</code> to edit the _config.yaml file (Feel free to use any editor you like). Edit it like this:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>url: http://lufeihaidao.github.com
+</span><span class='line'>title: Wulfric<span class="err">&#39;</span>s Blog
+</span><span class='line'>subtitle: FEEL FREE TO CHANGE THE WORLD!
+</span><span class='line'>author: Wulfric Wang
+</span><span class='line'>simple_search: https://google.com/search?q<span class="o">=</span>
+</span><span class='line'>description:
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>Write Your First Article</h4>
+
+<p>Blog posts must be stored in the source/_posts directory and named according to Jekyll’s naming conventions: YYYY-MM-DD-post-title.markdown. The name of the file will be used as the url slug, and the date helps with file distinction and determines the sorting order for post loops.</p>
+
+<p>Octopress provides a rake task to create new blog posts with the right naming conventions, with sensible yaml metadata.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake new_post<span class="o">[</span><span class="s1">&#39;My first article&#39;</span><span class="o">]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>You will find a new markdown file in your source/_posts/ folder. Edit it!</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>---
+</span><span class='line'>layout: post
+</span><span class='line'>title: <span class="s2">&quot;Personal Blog with Github Page and Octopress&quot;</span>
+</span><span class='line'>date: 2012-11-30 00:19
+</span><span class='line'>comments: <span class="nb">true</span>
+</span><span class='line'>categories: git
+</span><span class='line'>---
+</span><span class='line'>
+</span><span class='line'>Octopress Blog: Blog <span class="k">for </span>geek!
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>You can add a single category or multiple categories like this.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c"># One category</span>
+</span><span class='line'>categories: Sass
+</span><span class='line'>
+</span><span class='line'><span class="c"># Multiple categories example 1</span>
+</span><span class='line'>categories: <span class="o">[</span>CSS3, Sass, Media Queries<span class="o">]</span>
+</span><span class='line'>
+</span><span class='line'><span class="c"># Multiple categories example 2</span>
+</span><span class='line'>categories:
+</span><span class='line'>- CSS3
+</span><span class='line'>- Sass
+</span><span class='line'>- Media Queries
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Please remember that when writing a post, you can add an HTML comment <code>&lt;!--more--&gt;</code> to split the post for an excerpt. Only the first section of the post, before the comment, will show up on the blog index.</p>
+
+<h4>Push It to Github</h4>
+
+<p>Now you&#8217;ve add a new article. Push it remotely:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c"># Do this to preview whether it works well or not</span>
+</span><span class='line'>rake preview
+</span><span class='line'><span class="c"># Deploy it to github page</span>
+</span><span class='line'>rake gen_deploy
+</span><span class='line'><span class="c"># Do these to commit source</span>
+</span><span class='line'>git add . <span class="c"># add all useful files you want to commit</span>
+</span><span class='line'>git commit -m <span class="s1">&#39;My first article&#39;</span> <span class="c"># commit it locally</span>
+</span><span class='line'>git push origin <span class="nb">source</span> <span class="c"># push source remotely</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Three important folder:</p>
+
+<ul>
+<li>source: source files, edit in this folder</li>
+<li>public: local preview</li>
+<li>_deploy: remote repository</li>
+</ul>
+
+
+<p>A common workflow is like that:</p>
+
+<ol>
+<li>Add new article</li>
+<li>Edit this article</li>
+<li>Preview it</li>
+<li>Deploy it</li>
+<li>Commit the source branch</li>
+</ol>
+
+
+<h2>I Want to Write and Deploy on Another Computer</h2>
+
+<p>It is very common that you want to post articles on another computer. You can follow this:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git clone git@github.com:lufeihaidao/lufeihaidao.github.com.git <span class="c"># clone your code</span>
+</span><span class='line'>bundle install
+</span><span class='line'>git checkout <span class="nb">source</span> <span class="c"># switch to source branch</span>
+</span><span class='line'>git clone git@github.com:lufeihaidao/lufeihaidao.github.com.git <span class="c"># clone your code</span>
+</span><span class='line'>mv lufeihaidao.github.com/ _deploy <span class="c"># for gen_deploy</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Or you can simply run <code>rake setup_github_pages</code> in an octopress copy and fill in your github pages repository url.</p>
+
+<p>Then please feel free to follow the workflow.</p>
+
+<p>Next possible post: octopress plugins or themes.</p>
 </div>
 
 
@@ -168,7 +350,7 @@ ruby with RVM Clone &hellip;">
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/git/'>git</a>
+    <a class='category' href='/blog/categories/git/'>git</a>, <a class='category' href='/blog/categories/octopress/'>octopress</a>
   
 </span>
 
