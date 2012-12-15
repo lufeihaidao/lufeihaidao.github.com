@@ -11,7 +11,9 @@ Octopress Blog: Blog for geek!
 This article focus on some simple steps to create a blog with github page and octopress.
 <!-- more -->
 
-## Preparation Work
+### Preparation Work
+
+
 
 I suppose that you've installed such softwares before you start:
 
@@ -59,7 +61,11 @@ git push origin source
 # You will have two branches: 'master' to deploy your code and 'source' to write and change your blog.
 ```
 
-## Post Your First Article
+
+
+### Post Your First Article
+
+
 
 Now you've already owned your blog on github page. You may have noticed that the default page is not what you perfer. Let's modify it.
 
@@ -144,7 +150,11 @@ A common workflow is like that:
 4. Deploy it
 5. Commit the source branch
 
-## I Want to Write and Deploy on Another Computer
+
+
+### I Want to Write and Deploy on Another Computer
+
+
 
 It is very common that you want to post articles on another computer. You can follow this:
 
@@ -161,3 +171,6 @@ Or you can simply run `rake setup_github_pages` in an octopress copy and fill in
 Then please feel free to follow the workflow.
 
 Next possible post: octopress plugins or themes.
+
+
+

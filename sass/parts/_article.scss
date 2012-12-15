@@ -10,6 +10,8 @@ article{
 		padding: 15px 0;
 	}
 	h2.title{
+        text-align:center;
+        text-shadow: 2px 2px 4px $color-gray03;
 		font-size: 1.8em;
 		font-weight: 300;
 		line-height: 35px;
@@ -21,6 +23,10 @@ article{
 	.entry-content{
 		line-height: 2;
 		text-align: justify;
+        .paragraph{
+            padding-left: 10px;
+            border-left: 5px solid $color-gray04;
+        }
 		a{
 			&:hover{
 				text-decoration: underline;
