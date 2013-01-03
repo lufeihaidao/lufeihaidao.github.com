@@ -4,7 +4,7 @@
   <title><![CDATA[Category: git | Wulfric's Blog]]></title>
   <link href="http://lufeihaidao.github.com/blog/categories/git/atom.xml" rel="self"/>
   <link href="http://lufeihaidao.github.com/"/>
-  <updated>2012-12-05T18:56:55+08:00</updated>
+  <updated>2013-01-03T20:58:57+08:00</updated>
   <id>http://lufeihaidao.github.com/</id>
   <author>
     <name><![CDATA[Wulfric Wang]]></name>
@@ -25,7 +25,7 @@
 <!-- more -->
 
 
-<h2>Preparation Work</h2>
+<h3>Preparation Work</h3>
 
 <p>I suppose that you've installed such softwares before you start:</p>
 
@@ -80,7 +80,7 @@ git push origin source</p>
 
 <p>```</p>
 
-<h2>Post Your First Article</h2>
+<h3>Post Your First Article</h3>
 
 <p>Now you've already owned your blog on github page. You may have noticed that the default page is not what you perfer. Let's modify it.</p>
 
@@ -181,7 +181,7 @@ git push origin source # push source remotely
 </ol>
 
 
-<h2>I Want to Write and Deploy on Another Computer</h2>
+<h3>Deploy somewhere else</h3>
 
 <p>It is very common that you want to post articles on another computer. You can follow this:</p>
 
