@@ -152,7 +152,7 @@ A common workflow is like that:
 
 
 
-### I Want to Write and Deploy on Another Computer
+### Deploy somewhere else
 
 
 
