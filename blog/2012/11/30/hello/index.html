@@ -340,6 +340,8 @@
 
 
 <script type="text/javascript">
+  tmp = '<div"><a href="#">CONTENTS</a></div>';
+  $('.post-index').append(tmp);
   $.each($('h3, h4'), function(index, item){
       item.id = 'menuindex'+index;
       tmpText = $(item).text();
