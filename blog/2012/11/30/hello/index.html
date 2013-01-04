@@ -340,7 +340,7 @@
 
 
 <script type="text/javascript">
-  tmp = '<div"><a href="#">CONTENTS</a></div>';
+  tmp = '<div><a href="#">CONTENTS</a></div>';
   $('.post-index').append(tmp);
   $.each($('h3, h4'), function(index, item){
       item.id = 'menuindex'+index;
@@ -410,5 +410,10 @@
 
 
 
+  <script type="text/javascript">
+    if($('article').length>1){
+      $('article').last().css('border-bottom-width','0px')
+    }
+  </script>
 </body>
 </html>

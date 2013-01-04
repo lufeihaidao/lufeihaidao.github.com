@@ -4,7 +4,7 @@
   <title><![CDATA[Wulfric's Blog]]></title>
   <link href="http://lufeihaidao.github.com/atom.xml" rel="self"/>
   <link href="http://lufeihaidao.github.com/"/>
-  <updated>2013-01-03T21:47:24+08:00</updated>
+  <updated>2013-01-04T19:00:03+08:00</updated>
   <id>http://lufeihaidao.github.com/</id>
   <author>
     <name><![CDATA[Wulfric Wang]]></name>
@@ -12,6 +12,113 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Use slash theme]]></title>
+    <link href="http://lufeihaidao.github.com/blog/2013/01/04/use-slash-theme/"/>
+    <updated>2013-01-04T14:27:00+08:00</updated>
+    <id>http://lufeihaidao.github.com/blog/2013/01/04/use-slash-theme</id>
+    <content type="html"><![CDATA[<p>After I have had my own octopress blog, I start to look for a different theme. And fortunately I&#8217;ve find it. It is slash. Simple and cool. Thanks, <a href="http://zespia.tw/">zespia</a>.</p>
+
+<p><img src="http://www.lufeipic.tk/f/l/?.jpg" title="preview of slash theme" alt="preview of slash theme"></p>
+
+<!--more-->
+
+
+<h3>Install</h3>
+
+<p>Type the code below and experience Slash!</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">cd </span>octopress
+</span><span class='line'>git clone git://github.com/tommy351/Octopress-Theme-Slash.git .themes/slash
+</span><span class='line'>rake install<span class="o">[</span><span class="s1">&#39;slash&#39;</span><span class="o">]</span>
+</span><span class='line'>rake generate
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Have problems when installing with zsh? Try <code>rake install\['slash'\]</code> instead.</p>
+
+<p>See the features and Q&amp;As <a href="http://zespia.tw/Octopress-Theme-Slash/">here</a>.</p>
+
+<h3>Personal Change</h3>
+
+<p>It&#8217;s not so comfortable to have the exectly same appearence as others, so I decide to change it :)</p>
+
+<h4>Switch Left and Right</h4>
+
+<p>This is quite easy. Just edit the <strong>margin</strong> attribute value of div.post and div.meta in <code>sass/parts/_post.scss</code>. <!--_--></p>
+
+<h4>Create Index</h4>
+
+<p>I want to display the content of my article in the right side. Let&#8217;s use jQery to add the chapter index.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>  <span class="nx">tmp</span> <span class="o">=</span> <span class="s1">&#39;&lt;div&gt;&lt;a href=&quot;#&quot;&gt;CONTENTS&lt;/a&gt;&lt;/div&gt;&#39;</span><span class="p">;</span>
+</span><span class='line'>  <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.post-index&#39;</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="nx">tmp</span><span class="p">);</span>
+</span><span class='line'>  <span class="nx">$</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;h3, h4&#39;</span><span class="p">),</span> <span class="kd">function</span><span class="p">(</span><span class="nx">index</span><span class="p">,</span> <span class="nx">item</span><span class="p">){</span>
+</span><span class='line'>      <span class="nx">item</span><span class="p">.</span><span class="nx">id</span> <span class="o">=</span> <span class="s1">&#39;menuindex&#39;</span><span class="o">+</span><span class="nx">index</span><span class="p">;</span>
+</span><span class='line'>      <span class="nx">tmpText</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="nx">item</span><span class="p">).</span><span class="nx">text</span><span class="p">();</span>
+</span><span class='line'>      <span class="k">if</span><span class="p">(</span><span class="nx">item</span><span class="p">.</span><span class="nx">tagName</span><span class="p">.</span><span class="nx">toLowerCase</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;h3&#39;</span><span class="p">){</span>
+</span><span class='line'>        <span class="nx">tmpClass</span> <span class="o">=</span> <span class="s1">&#39;menuindexh3&#39;</span><span class="p">;</span>
+</span><span class='line'>      <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+</span><span class='line'>        <span class="nx">tmpClass</span> <span class="o">=</span> <span class="s1">&#39;menuindexh4&#39;</span><span class="p">;</span>
+</span><span class='line'>      <span class="p">}</span>
+</span><span class='line'>      <span class="nx">tmp</span> <span class="o">=</span> <span class="s1">&#39;&lt;div class=&quot;&#39;</span> <span class="o">+</span> <span class="nx">tmpClass</span> <span class="o">+</span><span class="s1">&#39;&quot;&gt;&lt;a href=&quot;#&#39;</span> <span class="o">+</span> <span class="nx">item</span><span class="p">.</span><span class="nx">id</span> <span class="o">+</span>
+</span><span class='line'>            <span class="s1">&#39;&quot;&gt;&#39;</span> <span class="o">+</span> <span class="nx">tmpText</span> <span class="o">+</span> <span class="s1">&#39;&lt;/a&gt;&lt;/div&gt;&#39;</span><span class="p">;</span>
+</span><span class='line'>      <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.post-index&#39;</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="nx">tmp</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">});</span>
+</span><span class='line'><span class="nt">&lt;/script&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Put this code snippet to <code>source/_layouts/post.html</code>,<!--_-->
+and append <code>&lt;div class="post-index"&gt;&lt;/div&gt;</code> to div.meta in <code>souce/_includes/article.html</code>.
+Then edit its style:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='scss'><span class='line'><span class="nc">.post-index</span><span class="p">{</span>
+</span><span class='line'>  <span class="na">position</span><span class="o">:</span> <span class="no">fixed</span><span class="p">;</span>
+</span><span class='line'>  <span class="na">top</span><span class="o">:</span> <span class="mi">250</span><span class="kt">px</span><span class="p">;</span>
+</span><span class='line'>  <span class="na">padding-top</span><span class="o">:</span> <span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+</span><span class='line'>  <span class="nt">a</span><span class="p">{</span><span class="k">@include</span><span class="nd"> link-colors</span><span class="p">(</span><span class="nv">$color-main</span><span class="o">,</span> <span class="nv">$color-main-darken</span><span class="p">);}</span>
+</span><span class='line'>  <span class="nc">.menuindexh4</span><span class="p">{</span>
+</span><span class='line'>    <span class="na">padding-left</span><span class="o">:</span> <span class="mi">15</span><span class="kt">px</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>And put this snippet to the .meta block of <code>sass/parts/_post.scss</code>.<!--_--></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Personal Blog with Github Page and Octopress]]></title>
