@@ -6,9 +6,10 @@ comments: true
 categories: [git, octopress] 
 ---
 
-Octopress Blog: Blog for geek!
+**Octopress Blog: Blog for geek!** This article focus on some simple steps to create a blog with github page and octopress.
 
-This article focus on some simple steps to create a blog with github page and octopress.
+{% img http://www.lufeipic.tk/f/m/?.png 'Github and Octopress' 'Github and Octopress' %}
+
 <!-- more -->
 
 ### Preparation Work
