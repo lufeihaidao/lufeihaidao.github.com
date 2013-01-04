@@ -8,8 +8,8 @@
 	}
 	.meta{
     margin-left: 850px; /*added*/
-		position: fixed;
-		top: 177px;
+		position: absolute;
+		top: 85px;
 		line-height: 2;
 		font-size: 0.9em;
 		color: $color-gray02;
@@ -24,6 +24,8 @@
 			@include transition(0.3s);
 		}
     .post-index{
+      position: fixed;
+      top: 250px;  
       padding-top: 20px;
       a{
         @include link-colors($color-main, $color-main-darken);
