@@ -77,7 +77,9 @@ article{
 			}
 		}
 		img, video{
-			max-width: 100%;
+			max-width: 99.5%; //modified from 100 to 99.5 to fit the border
+            border: 2px groove #118D11;
+            box-shadow: rgba(0, 0, 0, 0.15) 0 1px 4px;
 			height: auto;
 		}
 		blockquote{
