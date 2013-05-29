@@ -8,6 +8,7 @@ body{
 	font-family: $font-default;
 	font-weight: 300;
 	font-size: 14px;
+	text-shadow: #ffffff 0px 1px 0px;
 	background: $color-background;
 	color: $color-gray00;
 	@media screen and (max-width: 1040px){
@@ -28,6 +29,7 @@ h3{
     background-color:#9c0;
     padding-left:5px;
     border: 1px groove #666;
+    text-shadow: rgb(90,185,27) 0px 1px 0px;
 }
 a{
 	text-decoration: none;
